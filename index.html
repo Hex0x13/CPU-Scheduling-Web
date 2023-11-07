@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <select name="processType" id="process-type">
+            <optgroup label="Non-Preemptive">
+                <option value="FCFS">FCFS Algorithm</option>
+                <option value="SJF">SJS Algorithm</option>
+                <option value="NonPreempPriority">Priority Scheduling&lpar;non-preemptive&rpar;</option>
+            </optgroup>
+            <optgroup label="Preemptive">
+                <option value="SRTF">SRTF Algorithm</option>
+                <option value="RoundRobin">Round Robin Algorithm</option>
+                <option value="PreempPriority">Priority Scheduling &lpar;preemptive&rpar;</option>
+            </optgroup>
+        </select>
+        <form oninput="result.value=numOfProcess.value">
+            <label for="num-of-process">Number of process: </label>
+            <output name="result" for="num-of-process">1</output>
+            <input name="numOfProcess" type="range" id="num-of-process" max="30" min="1" value="1">
+        </form>
+        <button class="start-process-btn">Start Process</button>
+    </header>
+    <main>
+        <div class="input-container">
+            <div class="table-input"></div>
+        </div>
+        <div class="result-container">
+            <div class="gantt-chart-container">
+                <div class="gantt-chart"></div>
+            </div>
+            <div class="result-table"></div>
+        </div>
+    </main>
+</body>
+</html>

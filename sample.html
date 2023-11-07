@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="mySelect">
+        <optgroup label="Group A">
+            <option value="1">Item 1</option>
+            <option value="2">Item 2</option>
+        </optgroup>
+        <optgroup label="Group B">
+            <option value="3">Item 3</option>
+            <option value="4">Item 4</option>
+        </optgroup>
+    </select>
+    <script>
+        const selectElement = document.getElementById('mySelect');
+        selectElement.addEventListener('change', () => {
+            console.log(selectElement.options[selectElement.selectedIndex].parentElement.label);
+            // const selectedOption = selectElement.options[selectElement.selectedIndex];
+            // const selectedOptgroup = selectedOption.parentElement;
+            // if (selectedOption.parentElement.tagName === 'OPTGROUP') {
+            //     const optgroupLabel = selectedOptgroup.label;
+    
+            //     console.log('Selected Optgroup Label:', optgroupLabel);
+            // } else {
+            //     console.log('The selected item does not belong to an Optgroup.');
+            // }
+        });
+
+    </script>
+</body>
+</html>

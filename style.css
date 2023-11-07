@@ -1,0 +1,177 @@
+html,
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: rgb(48, 48, 48);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button {
+    border: 1px solid white;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+header {
+    height: 60px;
+    width: 100%;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+header > * {
+    margin: 0 clamp(5px, 3vw, 50px);
+}
+
+form[oninput] {
+    width: 300px;
+}
+
+.start-process-btn {
+    margin-left: auto;
+    margin-right: 80px;
+    padding: 5px;
+    background: rgb(34, 81, 168);
+    border-radius: 5px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 60px);
+}
+
+.input-container {
+    flex: 1;
+    border: 1px solid white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.result-container {
+    flex: 1;
+    border: 1px solid white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.table-input {
+    margin: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: clamp(40px, 80%, 500px);
+}
+
+.table-input>* {
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 3px 10px;
+    text-align: center;
+}
+
+.table-input:not(.four-col) > *:nth-child(3n + 1) {
+    border-left: 1px solid white;
+}
+
+.table-input:not(.four-col) > *:nth-child(-n+3) {
+    border-top: 1px solid white;
+}
+
+.table-input.four-col > *:nth-child(4n + 1) {
+    border-left: 1px solid white;
+}
+
+.table-input.four-col > *:nth-child(-n+4) {
+    border-top: 1px solid white;
+}
+
+.gantt-chart-container {
+    display: flex;
+    height: 120px;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid white;
+    overflow: auto;
+}
+
+.gantt-chart {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    margin: 0 50px;
+    overflow: visible;
+}
+
+.gantt-chart>div {
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    height: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gantt-chart > div:nth-child(1) {
+    border-left: 1px solid white;
+}
+
+.gantt-chart>div>div:first-child {
+    position: absolute;
+    bottom: -20px;
+    left: -5px;
+}
+
+.gantt-chart>div:last-child>div:last-child {
+    position: absolute;
+    bottom: -20px;
+    right: -5px;
+}
+
+label[for="quantum-time-input"] {
+    margin-top: 10px;
+}
+
+#quantum-time-input {
+    margin-top: 10px;
+    text-align: start;
+}
+
+.result-table {
+    display: grid;
+    padding: 50px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.result-table > div {
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 5px;
+    text-align: center;
+}
+
+.result-table > div:nth-child(3n) {
+    border-right: 1px solid white;
+}
+
+.result-table>div:nth-child(-n+3) {
+    border-top: 1px solid white;
+}
